@@ -85,6 +85,5 @@ func (m *HelloWorld) Renovate(
 		WithEnvVariable("RENOVATE_GIT_AUTHOR", "Renovate Bot <bot@renovateapp.com>").
 		WithEnvVariable("RENOVATE_REPOSITORIES", repo).
 		WithEnvVariable("CACHE_HACK", cacheHack.String()).
-		WithoutEnvVariable("OTEL_EXPORTER_OTLP_ENDPOINT").
 		WithExec(args, dagger.ContainerWithExecOpts{UseEntrypoint: true})
 }
